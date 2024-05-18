@@ -1,0 +1,11 @@
+.Advanced{
+    background-color: rgba(173, 216, 230, 0.445);
+    min-height: 80vh;
+
+
+}
+@media(max-width:768px){
+    .Advanced{
+        min-height: fit-content;
+    }
+}
