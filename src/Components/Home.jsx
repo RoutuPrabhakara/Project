@@ -30,7 +30,7 @@ function Home() {
 
 ]
   return (
-    <div className='container-fluid p-2 p-sm-3 p-md-5'>
+    <div className='container-fluid p-3  p-md-5'>
             <div className="row align-items-center  hero">
                 <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                     <div className="mb-4">
@@ -57,8 +57,8 @@ function Home() {
                        Data.map((item, index)=>(
                         <div className="col-md-6">
                             <div className="card mb-4 p-3 shadow border-0">
-                                <h1 className="fs-2">{item.Name}</h1>
-                                <p className="fs-4 text-secondary">{item.Para}</p>
+                                <h1 className="fs-3">{item.Name}</h1>
+                                <p className="fs-6 text-secondary">{item.Para}</p>
                             </div>
                         </div>
                        ))
