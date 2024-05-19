@@ -255,6 +255,20 @@ const Data1=[{
                                     </div>
                         </div>
                     </div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-6 mt-5">
+                            <img src="https://dsathemes.com/html/martex_1.1/files/images/img-02.png" alt="" className="w-100" />
+                            </div>
+                            <div className="col-md-6 mt-5">
+                               <h1 className="fs-5">QUICK INTEGRATION</h1>
+                               <h1 className="fs-3">Integrate all your  essential tools</h1>
+                               <p>Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis sodales magna undo aoreet primis</p>
+                               <p>Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an ultrice ipsum aliquam undo congue dolor cursus purus congue and ipsum purus sapien a blandit</p>
+
+                            </div>
+                        </div>
+                    </div>
                    
 
 
