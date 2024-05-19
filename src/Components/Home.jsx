@@ -91,14 +91,14 @@ const [slidesToShow, setSlidesToShow] = useState(8); // Default to showing 3 sli
             autoplaySpeed: 1000, // Change delay as needed
           };
     const Data2=[
-        "https://dsathemes.com/html/martex_1.1/files/images/brand-9.png",
-        "https://dsathemes.com/html/martex_1.1/files/images/brand-5.png",
         "https://dsathemes.com/html/martex_1.1/files/images/brand-6.png",
         "https://dsathemes.com/html/martex_1.1/files/images/brand-7.png",
-        "https://dsathemes.com/html/martex_1.1/files/images/brand-6-white.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-8.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-9.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-1.png",
         "https://dsathemes.com/html/martex_1.1/files/images/brand-2.png",
         "https://dsathemes.com/html/martex_1.1/files/images/brand-4.png",
-        "https://dsathemes.com/html/martex_1.1/files/images/brand-7-white.png"
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-5.png"
     ]
   return (
     <div className='container-fluid p-3  p-md-5'>
