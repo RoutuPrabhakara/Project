@@ -29,6 +29,25 @@ function Home() {
 },
 
 ]
+const Data1=[{
+    Name:"Integrated",
+    Para:"Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor"
+},
+{
+    Name:"Flexible",
+    Para:"Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor"
+},
+{
+    Name:"Intuitive",
+    Para:"Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor"
+},
+{
+    Name:"Efficient",
+    Para:"Porta semper lacus and cursus feugiat at primis ultrice a ligula auctor"
+},
+
+
+]
   return (
     <div className='container-fluid p-3  p-md-5'>
             <div className="row align-items-center  hero">
@@ -206,6 +225,34 @@ function Home() {
                                 <p>Ligula risus auctor tempus feugiat dolor lacinia nemo purus in lipsum purus sapien quaerat a primis viverra tellus vitae luctus dolor ipsum neque ligula quaerat</p>
 
                             </div>
+                        </div>
+                    </div>
+                    <div className="container ">
+                        <div className="row ">
+                            <div className="col-md-6">
+                              <h1 className="fs-5">CONTROL DATA ACCESS</h1>  
+                              <h1 className=" fs-2">Control data <br /> access with ease</h1>
+                              <p>Sodales tempor sapien quaerat ipsum and congue undo laoreet turpis neque auctor turpis vitae dolor luctus placerat magna ligula and cursus vitae</p>
+                              <p>Tempor sapien quaerat undo ipsum laoreet diam purus sapien a dolor ociis ultrice ipsum aliquam congue a dolor cursus congue varius magnis</p>
+                              <p>Cursus purus suscipit vitae cubilia magnis diam volute egestas sapien ultrice auctor</p>
+                            </div>
+
+                            <div className="col-md-6">
+                                <div className="row mt-3">
+                                    {
+                                        Data1.map((item,index)=>(
+                                            <div className="col-6">
+                                            <div className="card mb-3 p-3">
+                                               <h1 className="fs-4">{item.Name}</h1>
+                                                <p className="fs-6">{item.Para}</p>
+                                            </div>
+                                            </div>
+                                           
+
+                                        ))
+                                    }
+                                </div>
+                                    </div>
                         </div>
                     </div>
                    
