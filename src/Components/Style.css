@@ -9,3 +9,8 @@
         min-height: fit-content;
     }
 }
+.black{
+    background-color: aliceblue;
+    
+    border-radius: 10px;
+}
