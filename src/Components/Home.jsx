@@ -52,7 +52,7 @@ const Data1=[{
 
 ]
 
-const [slidesToShow, setSlidesToShow] = useState(6); // Default to showing 3 slides
+const [slidesToShow, setSlidesToShow] = useState(8); // Default to showing 3 slides
 
     useEffect(() => {
       // Check the screen width and update the number of slides to show
