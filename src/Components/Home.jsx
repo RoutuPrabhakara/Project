@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Style.css'
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
     const Data=[{
@@ -48,6 +51,55 @@ const Data1=[{
 
 
 ]
+
+const [slidesToShow, setSlidesToShow] = useState(6); // Default to showing 3 slides
+
+    useEffect(() => {
+      // Check the screen width and update the number of slides to show
+      const handleResize = () => {
+        if (window.innerWidth <= 600) {
+          setSlidesToShow(1); // On smaller screens, show only 1 slide
+        }
+        else if(window.innerWidth<=800) {
+          setSlidesToShow(2); // On wider screens, show 3 slides
+        } else if(window.innerWidth<=900) {
+          setSlidesToShow(2); // On wider screens, show 3 slides
+        }
+        else{
+            setSlidesToShow(4); // On wider screens, show 3 slides
+        }
+      };
+    
+      // Call the handleResize function initially and add a resize event listener
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+        const settings = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: slidesToShow,
+            slidesToScroll: 1,
+            autoplay: true,
+            centerMode:false,
+            centerPadding: '60px',
+            autoplaySpeed: 1000, // Change delay as needed
+          };
+    const Data2=[
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-9.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-5.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-6.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-7.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-6-white.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-2.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-4.png",
+        "https://dsathemes.com/html/martex_1.1/files/images/brand-7-white.png"
+    ]
   return (
     <div className='container-fluid p-3  p-md-5'>
             <div className="row align-items-center  hero">
@@ -188,10 +240,10 @@ const Data1=[{
                         </div>
                         <div className="col-md-6 mt-5">
                             <h1 className="fs-6 color-dark-black">PRODUCTIVITY FOCUSED</h1>
-                            <h1 className="fs-3">Work smarter with  <br />powerful features</h1>
+                            <h1 className="fs-3">Work smarter with  powerful features</h1>
                             <p>Sodales tempor sapien quaerat ipsum undo congue laoreet turpis neque auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit</p>
                             <p>Nemo ipsam egestas volute turpis egestas ipsum and purus sapien ultrice an aliquam quaerat ipsum augue turpis sapien cursus congue magna purus quaerat at ligula purus egestas magna cursus undo varius purus magnis sapien quaerat</p>
-                            <a href="" className="fs-3 w-bold">All-in-one platform <i class="bi bi-chevron-right"></i></a>
+                            <a href="" className="fs-3 w-bold mb-3 d-block">All-in-one platform <i class="bi bi-chevron-right"></i></a>
 
                         </div>
                        </div>
@@ -269,9 +321,25 @@ const Data1=[{
                             </div>
                         </div>
                     </div>
-                   
+                   <div className="container">
+                    <h1 className="text-center fs-3 mt-5">Customizable Dashboards</h1>
+                    <p className="fs-6">Ligula risus auctor tempus magna feugiat lacinia.</p>
+                   </div>
+                   <div className="container">
+                    <img src="https://dsathemes.com/html/martex_1.1/files/images/dashboard-05.png" alt="" className="w-100" />
+                   </div>
+                   <div className="container">
+                    <h1 className="fs-3 text-center mt-5 ">Trusted and used by over 3,400 companies</h1>
+                   </div>
 
 
+                    <Slider {...settings}>
+                    {
+                                Data2.map((item,index)=>(
+                                    <img src={item} alt="" className="w-100" />
+                                ))
+                            }
+                    </Slider>
 
 
 
